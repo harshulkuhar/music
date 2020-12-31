@@ -37,7 +37,7 @@ public class AlbumService {
     /** Updates an Album.
      * NOTE: both addAlbum() and editAlbum() use the same CrudRepository method save().
      * This method works in two ways : it will check whether the album object we have given it exists in the database,
-     * and if it doesnt exist, will add it. If it exists, it will overwrite it.
+     * and if it doesnt exist, will add it. If it exists, it will be overwritten by the object that we have.
      */
 	public void editAlbum(Album album) {
         album_repository.save(album);

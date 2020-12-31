@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
+/**This is the Entity class Song. It has a songID which is a primary key mapped 
+ * to the column song_id in the databse; and a songName which is mapped to song_name */
 @Entity
 @Table(name="songs")
 public class Song {
@@ -19,10 +21,14 @@ public class Song {
     @Column(name = "song_name")
     private String songName;
 
+    /** Created a many-to-one relationship with Album object, since multiple songs
+     * can be linked to one album. This column will store the Album the song is referencing.
+     */
     @ManyToOne
     private Album album;
 
 
+    /**Constructors, getters and setters */
     public Song(){
         
     }
@@ -30,7 +36,7 @@ public class Song {
     public Song(String songID, String songName, String albumid) {
         this.songID = songID;
         this.songName = songName;
-        this.album = new Album(albumid, "");
+        this.album = new Album(albumid, ""); //given the album id, it creates an album with the id, but with an empty name.
     }
 
 

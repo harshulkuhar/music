@@ -5,10 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**This is the Entity class. */
 @Entity
 @Table(name="albums")
 public class Album {
     
+    /**Primary key is albumID which is mapped to album_id column in the database. */
     @Id
     @Column(name = "album_id")
     private String albumID;
@@ -16,6 +18,7 @@ public class Album {
     @Column(name = "album_name")
     private String albumName;
 
+    /**Constructors, getters and setters */
     public Album(){
 
     }
