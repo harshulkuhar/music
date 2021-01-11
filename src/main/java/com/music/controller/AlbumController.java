@@ -1,6 +1,9 @@
-package com.music.album;
+package com.music.controller;
 
 import java.util.*;
+
+import com.music.service.AlbumService;
+import com.music.model.Album;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -9,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**This is the REST Controller. */
@@ -51,10 +53,5 @@ public class AlbumController {
     @DeleteMapping("/albums/{albumid}")
     public void deleteAlbum(@PathVariable String albumid){
         album_service.deleteAlbum(albumid);
-    }
-    
-    @RequestMapping("/home")
-    public String helloWebpage(){
-        return "home.jsp";
     }
 }

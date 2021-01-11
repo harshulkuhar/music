@@ -1,6 +1,9 @@
-package com.music.song;
+package com.music.service;
 
 import java.util.*;
+import com.music.model.Song;
+
+
 public interface SongService {
     
     /**Returns all songs stored in the database. */

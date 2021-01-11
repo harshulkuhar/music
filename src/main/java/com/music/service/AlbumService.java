@@ -1,6 +1,7 @@
-package com.music.album;
+package com.music.service;
 
 import java.util.*;
+import com.music.model.Album;
 
 public interface AlbumService {
     

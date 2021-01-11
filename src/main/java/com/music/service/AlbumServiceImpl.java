@@ -1,6 +1,9 @@
-package com.music.album;
+package com.music.service;
 
 import java.util.*;
+
+import com.music.model.*;
+import com.music.repository.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

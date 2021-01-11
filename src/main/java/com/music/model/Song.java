@@ -1,6 +1,5 @@
-package com.music.song;
+package com.music.model;
 
-import com.music.album.Album;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;

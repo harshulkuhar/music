@@ -1,8 +1,10 @@
-package com.music.song;
+package com.music.controller;
 
 import java.util.*;
 
-import com.music.album.Album;
+import com.music.model.Album;
+import com.music.model.Song;
+import com.music.service.SongService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;

@@ -1,10 +1,15 @@
-package com.music.song;
+package com.music.repository;
+
 import java.util.*;
 
-import org.springframework.data.repository.CrudRepository;
+import com.music.model.*;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**Repository class */
-public interface SongRepository extends CrudRepository<Song, String>{
+@Repository
+public interface SongRepository extends JpaRepository<Song, String>{
     
     /**Custom method created that returns the Song object given its id.
      * NOTE: there already exists a method in CrudRepository named
