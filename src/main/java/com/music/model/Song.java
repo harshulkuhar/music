@@ -1,7 +1,7 @@
 package com.music.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -10,14 +10,13 @@ import javax.persistence.Table;
 /**This is the Entity class Song. It has a songID which is a primary key mapped 
  * to the column song_id in the databse; and a songName which is mapped to song_name */
 @Entity
-@Table(name="songs")
+@Table(name="song")
 public class Song {
     
     @Id
-    @Column(name = "song_id")
+    @GeneratedValue
     private String songID;
 
-    @Column(name = "song_name")
     private String songName;
 
     /** Created a many-to-one relationship with Album object, since multiple songs

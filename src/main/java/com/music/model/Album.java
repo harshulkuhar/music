@@ -1,21 +1,20 @@
 package com.music.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**This is the Entity class. */
 @Entity
-@Table(name="albums")
+@Table(name="album")
 public class Album {
     
     /**Primary key is albumID which is mapped to album_id column in the database. */
     @Id
-    @Column(name = "album_id")
+    @GeneratedValue
     private String albumID;
 
-    @Column(name = "album_name")
     private String albumName;
 
     /**Constructors, getters and setters */
