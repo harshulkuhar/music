@@ -1,5 +1,7 @@
 package com.music.service;
 
+import java.util.*;
+
 import com.music.model.User;
 import com.music.repository.UserRepository;
 
@@ -20,5 +22,11 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword())); 
         userRepository.save(user);
         return "<h1>User added successfully</h1>";
+    }
+
+    public List<User> getAllUsers(){
+        List<User> users = new ArrayList<>();
+        userRepository.findAll().forEach(users::add);
+        return users;
     }
 }
