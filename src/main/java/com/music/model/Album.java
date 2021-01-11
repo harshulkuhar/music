@@ -1,4 +1,4 @@
-package com.music.album;
+package com.music.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
